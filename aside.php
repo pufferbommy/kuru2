@@ -29,19 +29,58 @@
       </a>
     </li>
     <li>
-      <a href="#" class="nav-link link-dark">
+      <a data-bs-toggle="collapse" href="#collapseDurableArticles" role="button" aria-expanded="false" aria-controls="collapseDurableArticles" class="nav-link link-dark">
         ครุภัณฑ์
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+        </svg>
       </a>
+      <div class="collapse" id="collapseDurableArticles">
+        <div>
+          <a style="padding: 0.5rem 2rem;" href="durable_articles.php" class="nav-link link-secondary">
+            เบิกครุภัณฑ์
+          </a>
+          <a style="padding: 0.5rem 2rem;" href="durable_articles.php" class="nav-link link-secondary">
+            ยืมครุภัณฑ์
+          </a>
+        </div>
+      </div>
     </li>
     <li>
-      <a href="#" class="nav-link link-dark">
+      <a data-bs-toggle="collapse" href="#collapseRegister" role="button" aria-expanded="false" aria-controls="collapseRegister" class="nav-link link-dark">
         ลงทะเบียน
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+        </svg>
       </a>
+      <div class="collapse" id="collapseRegister">
+        <div>
+          <a style="padding: 0.5rem 2rem;" href="register.php" class="nav-link link-secondary">
+            ลงทะเบียนวัสดุ
+          </a>
+          <a style="padding: 0.5rem 2rem;" href="register.php" class="nav-link link-secondary">
+            ลงทะเบียนครุภัณฑ์
+          </a>
+        </div>
+      </div>
     </li>
     <li>
-      <a href="#" class="nav-link link-dark">
+      <a data-bs-toggle="collapse" href="#collapseRegister" role="button" aria-expanded="false" aria-controls="collapseRegister" class="nav-link link-dark">
         แสดงรายงาน....
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+        </svg>
       </a>
+      <div class="collapse" id="collapseRegister">
+        <div>
+          <a style="padding: 0.5rem 2rem;" href="register.php" class="nav-link link-secondary">
+            วัสดุ
+          </a>
+          <a style="padding: 0.5rem 2rem;" href="register.php" class="nav-link link-secondary">
+            ครุภัณฑ์
+          </a>
+        </div>
+      </div>
     </li>
     <li>
       <a href="#" class="nav-link link-dark">
@@ -54,9 +93,22 @@
       </a>
     </li>
     <li>
-      <a href="#" class="nav-link link-dark">
+      <a data-bs-toggle="collapse" href="#collapsePurchase" role="button" aria-expanded="false" aria-controls="collapsePurchase" class="nav-link link-dark">
         จัดซื้อ
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+        </svg>
       </a>
+      <div class="collapse" id="collapsePurchase">
+        <div>
+          <a style="padding: 0.5rem 2rem;" href="purchase.php" class="nav-link link-secondary">
+            วัสดุ
+          </a>
+          <a style="padding: 0.5rem 2rem;" href="purchase.php" class="nav-link link-secondary">
+            ครุภัณฑ์
+          </a>
+        </div>
+      </div>
     </li>
     <li>
       <a href="#" class="nav-link link-dark">
