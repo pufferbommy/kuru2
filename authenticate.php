@@ -25,6 +25,11 @@ if ($stmt = $conn->prepare("SELECT id, password FROM accounts WHERE username = ?
 
   if ($row && password_verify($_POST["password"], $row["password"])) {
     session_regenerate_id();
+
+    $sql = "UPDATE accounts SET last_login = NOW() WHERE id = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute([$row["id"]]);
+
     $_SESSION['loggedin'] = true;
     $_SESSION["username"] = $_POST["username"];
     header("location: index.php");

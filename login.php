@@ -1,5 +1,10 @@
 <?php
 session_start();
+
+if (isset($_SESSION["loggedin"])) {
+  header("location: index.php");
+}
+
 if (isset($_SESSION["error"])) {
   echo "<script>alert('{$_SESSION["error"]}')</script>";
   unset($_SESSION["error"]);
@@ -25,12 +30,29 @@ if (isset($_SESSION["error"])) {
     body {
       height: 100%;
     }
+
+    body {
+      position: relative;
+      background-image: url(./imgs/newspaper.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      backdrop-filter: blur(0.5rem);
+    }
+
+    body::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.25);
+      z-index: -1;
+    }
   </style>
 </head>
 
-<body class="bg-light">
+<body>
   <div class="container h-100 d-flex justify-content-center align-items-center">
-    <main style="max-width: 500px;" class="bg-white w-100 shadow rounded p-5">
+    <main style="max-width: 500px;" class="bg-white w-100 shadow rounded-4 p-5">
       <div class="d-flex flex-column mb-4 align-items-center">
         <h1>ยินดีต้อนรับ</h1>
         <small class="text-secondary">กรอกชื่อผู้ใช้และรหัสผ่านเพื่อเข้าใช้งานระบบ</small>
