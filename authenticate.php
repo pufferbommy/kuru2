@@ -15,7 +15,8 @@ try {
 }
 
 if (!isset($_POST["username"], $_POST["password"])) {
-  header("location: " . $_SERVER['HTTP_REFERER'] . "?err=โปรดกรอกชื่อผู้ใช้และรหัสผ่าน!");
+  $_SESSION["error"] = "โปรดกรอกชื่อผู้ใช้และรหัสผ่าน!";
+  header("location: " . $_SERVER['HTTP_REFERER']);
 }
 
 if ($stmt = $conn->prepare("SELECT id, password FROM accounts WHERE username = ?")) {
@@ -28,6 +29,7 @@ if ($stmt = $conn->prepare("SELECT id, password FROM accounts WHERE username = ?
     $_SESSION["username"] = $_POST["username"];
     header("location: index.php");
   } else {
-    header("location: " . $_SERVER['HTTP_REFERER'] . "?err=ชื่อผู้ใช้หรือรหัสไม่ถูกต้อง!");
+    $_SESSION["error"] = "ชื่อผู้ใช้หรือรหัสไม่ถูกต้อง!";
+    header("location: " . $_SERVER['HTTP_REFERER']);
   }
 }
