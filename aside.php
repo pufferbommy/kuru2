@@ -1,4 +1,4 @@
-<aside class="d-flex h-100 flex-column flex-shrink-0 p-3 border-end" style="width: 280px;">
+<aside class="d-flex h-100 bg-light flex-column flex-shrink-0 p-3 border-end" style="width: 280px;">
   <div class="d-flex justify-content-between align-items-center">
     <div class="d-flex gap-2">
       <img src="https://i.pinimg.com/564x/47/ba/71/47ba71f457434319819ac4a7cbd9988e.jpg" alt="mdo" width="24" height="24" class="rounded-circle">
@@ -9,12 +9,12 @@
   <hr>
   <ul class="nav nav-pills flex-column mb-auto">
     <li class="nav-item">
-      <a href="#" class="nav-link active" aria-current="page">
+      <a href="index.php" class="nav-link link-dark">
         หน้าหลัก
       </a>
     </li>
     <li>
-      <a href="#" class="nav-link link-dark">
+      <a href="personnel.php" class="nav-link link-dark">
         บุคลากร
       </a>
     </li>
