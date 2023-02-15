@@ -1,34 +1,23 @@
 <?php
 session_start();
 
-$servername = "localhost";
-$dbname = "kuru2";
-$username = "root";
-$password = "";
-
-try {
-  $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  echo "Connected successfully";
-} catch (PDOException $e) {
-  echo "Connection failed: " . $e->getMessage();
-}
+include_once "dbconnect.php";
 
 if (!isset($_POST["username"], $_POST["password"])) {
   $_SESSION["error"] = "โปรดกรอกชื่อผู้ใช้และรหัสผ่าน!";
   header("location: " . $_SERVER['HTTP_REFERER']);
 }
 
-if ($stmt = $conn->prepare("SELECT id, password FROM accounts WHERE username = ?")) {
+if ($stmt = $conn->prepare("SELECT account_id,password FROM accounts WHERE username = ?")) {
   $stmt->execute([$_POST["username"]]);
   $row = $stmt->fetch();
 
   if ($row && password_verify($_POST["password"], $row["password"])) {
     session_regenerate_id();
 
-    $sql = "UPDATE accounts SET last_login = NOW() WHERE id = ?";
+    $sql = "UPDATE accounts SET last_login = NOW() WHERE account_id = ?";
     $stmt = $conn->prepare($sql);
-    $stmt->execute([$row["id"]]);
+    $stmt->execute([$row["account_id"]]);
 
     $_SESSION['loggedin'] = true;
     $_SESSION["username"] = $_POST["username"];
